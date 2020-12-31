@@ -10,7 +10,17 @@ public class PlayerMovement : MonoBehaviour
 
     public float gravity = 19.62f;
 
+    public float jumpHeight = 6f;
+
     private Vector3 velocity;
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            velocity.y = jumpHeight;
+        }
+    }
 
     void FixedUpdate()
     {

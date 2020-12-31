@@ -478,6 +478,7 @@ MonoBehaviour:
   controller: {fileID: 1892968903}
   speed: 5
   gravity: 19.62
+  jumpHeight: 6
 --- !u!23 &1892968899
 MeshRenderer:
   m_ObjectHideFlags: 0
