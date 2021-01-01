@@ -10,6 +10,8 @@ public class Weapon : MonoBehaviour
 
     public ParticleSystem muzzleFlash;
 
+    public GameObject impactEffect;
+
     void Shoot()
     {
         muzzleFlash.Play();
@@ -32,6 +34,9 @@ public class Weapon : MonoBehaviour
             {
                 target.TakeDamage(damage);
             }
+
+            var impactFlare = Instantiate(impactEffect, hitTarget.point, Quaternion.LookRotation(hitTarget.normal));
+            Destroy(impactFlare, 0.2f);
         }
     }
 
