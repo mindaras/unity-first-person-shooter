@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 119656998}
   - component: {fileID: 119657000}
   - component: {fileID: 119656999}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119656997}
   m_LocalRotation: {x: -0, y: 0.052117605, z: -0, w: 0.99864095}
-  m_LocalPosition: {x: 0, y: 0.005400002, z: 0.061099995}
+  m_LocalPosition: {x: 0, y: 0.005400002, z: 0.061100002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 330093053}
@@ -5077,11 +5077,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738805670}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.518, z: -0.017}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.518, z: -0.01700008}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 330093053}
+  m_Children: []
   m_Father: {fileID: 1892968901}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5431,7 +5430,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 738805671}
+    m_TransformParent: {fileID: 1892968901}
     m_Modifications:
     - target: {fileID: 1076631332239767593, guid: 1f1f2502514044370b7299cb15fae81a,
         type: 3}
@@ -5471,7 +5470,7 @@ PrefabInstance:
     - target: {fileID: 8084643566163218967, guid: 1f1f2502514044370b7299cb15fae81a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8084643566163218967, guid: 1f1f2502514044370b7299cb15fae81a,
         type: 3}
@@ -5481,12 +5480,12 @@ PrefabInstance:
     - target: {fileID: 8084643566163218967, guid: 1f1f2502514044370b7299cb15fae81a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.38899994
+      value: 0.12900007
       objectReference: {fileID: 0}
     - target: {fileID: 8084643566163218967, guid: 1f1f2502514044370b7299cb15fae81a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.906
+      value: 0.889
       objectReference: {fileID: 0}
     - target: {fileID: 8084643566163218967, guid: 1f1f2502514044370b7299cb15fae81a,
         type: 3}
@@ -5635,7 +5634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812805629}
   - component: {fileID: 1812805630}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
