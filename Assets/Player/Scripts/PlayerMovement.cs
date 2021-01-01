@@ -27,8 +27,13 @@ public class PlayerMovement : MonoBehaviour
         var x = Input.GetAxis("Horizontal");
         var z = Input.GetAxis("Vertical");
         var direction = transform.right * x + transform.forward * z;
+
+        direction.Normalize();
+
         controller.Move(direction * speed * Time.deltaTime);
+
         velocity.y -= gravity * Time.deltaTime;
+
         controller.Move(velocity * Time.deltaTime);
 
         if (controller.isGrounded)
