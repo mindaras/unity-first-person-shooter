@@ -8,8 +8,12 @@ public class Weapon : MonoBehaviour
 
     public Camera camera;
 
+    public ParticleSystem muzzleFlash;
+
     void Shoot()
     {
+        muzzleFlash.Play();
+
         RaycastHit hitTarget;
         var isHit = Physics.Raycast(camera.transform.position, camera.transform.forward, out hitTarget);
 
