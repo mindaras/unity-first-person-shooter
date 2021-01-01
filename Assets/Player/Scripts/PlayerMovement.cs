@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (controller.isGrounded && Input.GetButtonDown("Jump"))
         {
             velocity.y = jumpHeight;
         }
