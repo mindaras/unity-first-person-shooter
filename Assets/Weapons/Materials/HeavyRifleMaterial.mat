@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Rifle_Metallic
+  m_Name: HeavyRifleMaterial
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 2
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 8d7238ef6956649ac9721803aa2989a0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 119715a8b71dc4c94bd03f527c6ce761, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -36,19 +36,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: d8945b197559746469ff899d187255f7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8fe1d81313efe4c179ed30b96ddb424f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e00a3f31d03fd4e91b488d79a0917129, type: 3}
+        m_Texture: {fileID: 2800000, guid: 10fed169316f64556925dbc71cf4b93c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 1cde4fca2d6774914b06b33137f94a36, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2ecb150dde2624731ad4d7e101de7e48, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 4deac96662dda444087b5c21c574d14b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8ee023a0a26e84b61a60cad89aa6a034, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
