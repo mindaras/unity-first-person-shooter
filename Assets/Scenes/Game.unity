@@ -1239,7 +1239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 182510645, guid: 33f9bf42073164829843912655175bf4, type: 3}
       propertyPath: looping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 182510645, guid: 33f9bf42073164829843912655175bf4, type: 3}
       propertyPath: InitialModule.startSize.scalar
