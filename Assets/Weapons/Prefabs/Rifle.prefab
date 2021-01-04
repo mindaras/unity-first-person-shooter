@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 134750570}
   - component: {fileID: 134750571}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: FireLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134750569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0, z: 0.0654}
+  m_LocalPosition: {x: -0, y: 0.0029, z: 0.066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8084643566163218967}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 678415320}
   - component: {fileID: 678415319}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678415317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0726}
+  m_LocalPosition: {x: 0, y: 0.0038, z: 0.0656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8084643566163218967}

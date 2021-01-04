@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 116447135}
   - component: {fileID: 116447136}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116447134}
-  m_LocalRotation: {x: -0.028336221, y: -0.026601179, z: -0.00050190446, w: 0.99924433}
-  m_LocalPosition: {x: -0.0005, y: 0.0121, z: 0.0319}
+  m_LocalRotation: {x: -0.028328774, y: -0.038888205, z: -0.00084997324, w: 0.9988416}
+  m_LocalPosition: {x: -0.00012, y: 0.01184, z: 0.02975}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6251669828382686198}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.2480001, y: -4.46, z: 0.029000001}
 --- !u!108 &116447136
 Light:
   m_ObjectHideFlags: 0
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 182510643}
   - component: {fileID: 182510645}
   - component: {fileID: 182510644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,13 +117,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182510642}
-  m_LocalRotation: {x: -0.028336221, y: -0.026601179, z: -0.00050190446, w: 0.99924433}
-  m_LocalPosition: {x: -0.0001, y: 0.0132, z: 0.0285}
+  m_LocalRotation: {x: -0.009254442, y: -0.023101253, z: -0.0026737547, w: 0.9996868}
+  m_LocalPosition: {x: 0.000029999019, y: 0.012020004, z: 0.029729998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6251669828382686198}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.067, y: -2.6450002, z: -0.282}
 --- !u!198 &182510645
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -207,7 +207,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.06
+      scalar: 0.02
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -376,7 +376,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.4
+      scalar: 0.3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4857,7 +4857,7 @@ GameObject:
   - component: {fileID: 222960323242101991}
   - component: {fileID: 1376486596060436482}
   - component: {fileID: 8327529601104319277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: P_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4936,7 +4936,7 @@ GameObject:
   - component: {fileID: 4981018401943094506}
   - component: {fileID: 1185145563099694190}
   - component: {fileID: 3623423934269535502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: P_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5015,7 +5015,7 @@ GameObject:
   - component: {fileID: 8672588325679668318}
   - component: {fileID: 4964747489763122864}
   - component: {fileID: 3283866250197190126}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: P_Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5094,7 +5094,7 @@ GameObject:
   - component: {fileID: 5951532229586307468}
   - component: {fileID: 8475664230662358334}
   - component: {fileID: 3960602360713008339}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: P_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5173,7 +5173,7 @@ GameObject:
   - component: {fileID: 6049183401023074670}
   - component: {fileID: 6906492270341647999}
   - component: {fileID: 4313425065111437733}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: P_Slide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5251,7 +5251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6251669828382686198}
   - component: {fileID: 4486547851107635169}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5310,7 +5310,7 @@ GameObject:
   - component: {fileID: 1957332854341461356}
   - component: {fileID: 6276255922348884824}
   - component: {fileID: 8207067983071620243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: P_Sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5389,7 +5389,7 @@ GameObject:
   - component: {fileID: 4230983512413092731}
   - component: {fileID: 8688905825670464213}
   - component: {fileID: 1557042722911432919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: P_Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
