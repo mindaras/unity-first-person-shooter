@@ -18,8 +18,23 @@ public class Weapon : MonoBehaviour
 
     private float nextTimeToFire = 0f;
 
+    public int totalAmmo = 90;
+
+    public int cabinSize = 30;
+
+    private int currentAmmo;
+
+    public int reloadTime;
+
+    private void Start()
+    {
+        currentAmmo = cabinSize;
+    }
+
     void Shoot()
     {
+        currentAmmo--;
+
         muzzleFlash.Play();
 
         RaycastHit hitTarget;
@@ -54,12 +69,60 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    void Reload()
+    {
+        if (currentAmmo == cabinSize || totalAmmo <= 0)
+            return;
+
+
+        if (currentAmmo <= 0)
+        {
+            if (totalAmmo <= cabinSize)
+            {
+                currentAmmo = totalAmmo;
+                totalAmmo = 0;
+            } else
+            {
+                currentAmmo = cabinSize;
+                totalAmmo -= cabinSize;
+            }
+        } else
+        {
+            var missingAmmo = cabinSize - currentAmmo;
+
+            if (totalAmmo <= missingAmmo)
+            {
+                currentAmmo += totalAmmo;
+                totalAmmo = 0;
+            } else
+            {
+                currentAmmo += missingAmmo;
+                totalAmmo -= missingAmmo;
+            }
+        }
+    }
+
     void Update()
     {
+        if (currentAmmo <= 0)
+        {
+            if (totalAmmo > 0)
+            {
+                Reload();
+            }
+            
+            return;
+        }
+
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
             Shoot();
             nextTimeToFire = Time.time + 1f / fireRate;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
         }
     }
 }
