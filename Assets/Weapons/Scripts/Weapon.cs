@@ -10,6 +10,8 @@ public class Weapon : MonoBehaviour
 
     public GameObject impactEffect;
 
+    public UIManager uIManager; 
+
     private int damage = 10;
 
     public float hitForce = 60f;
@@ -34,6 +36,8 @@ public class Weapon : MonoBehaviour
     void Shoot()
     {
         currentAmmo--;
+
+        uIManager.UpdateAmmo(currentAmmo, totalAmmo);
 
         muzzleFlash.Play();
 
@@ -100,6 +104,8 @@ public class Weapon : MonoBehaviour
                 totalAmmo -= missingAmmo;
             }
         }
+
+        uIManager.UpdateAmmo(currentAmmo, totalAmmo);
     }
 
     void Update()
