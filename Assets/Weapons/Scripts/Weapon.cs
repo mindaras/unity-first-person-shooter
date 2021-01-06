@@ -10,9 +10,13 @@ public class Weapon : MonoBehaviour
 
     public GameObject impactEffect;
 
-    public UIManager uIManager; 
+    public UIManager uIManager;
 
-    private int damage = 10;
+    public Animator animator;
+
+    public bool spray;
+
+    public int damage = 10;
 
     public float hitForce = 60f;
 
@@ -24,17 +28,34 @@ public class Weapon : MonoBehaviour
 
     public int cabinSize = 30;
 
-    private int currentAmmo;
+    private int currentAmmo = -1;
 
-    public int reloadTime;
+    public float reloadTime = 1f;
+
+    private bool isReloading;
 
     private void Start()
     {
         currentAmmo = cabinSize;
+        uIManager.UpdateAmmo(currentAmmo, totalAmmo);
+    }
+
+    private void OnEnable()
+    {
+        isReloading = false;
+        animator.SetBool("Reloading", false);
+
+        if (currentAmmo != -1)
+        {
+            uIManager.UpdateAmmo(currentAmmo, totalAmmo);
+        }
     }
 
     void Shoot()
     {
+        if (isReloading || currentAmmo <= 0)
+            return;
+
         currentAmmo--;
 
         uIManager.UpdateAmmo(currentAmmo, totalAmmo);
@@ -73,11 +94,13 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    void Reload()
+    IEnumerator Reload()
     {
-        if (currentAmmo == cabinSize || totalAmmo <= 0)
-            return;
+        isReloading = true;
 
+        animator.SetBool("Reloading", true);
+
+        yield return new WaitForSeconds(reloadTime - .24f);
 
         if (currentAmmo <= 0)
         {
@@ -106,29 +129,30 @@ public class Weapon : MonoBehaviour
         }
 
         uIManager.UpdateAmmo(currentAmmo, totalAmmo);
+
+        animator.SetBool("Reloading", false);
+
+        yield return new WaitForSeconds(.25f);
+
+        isReloading = false;
     }
 
     void Update()
     {
-        if (currentAmmo <= 0)
+        if (currentAmmo <= 0 && totalAmmo > 0 && !isReloading)
         {
-            if (totalAmmo > 0)
-            {
-                Reload();
-            }
-            
-            return;
+            StartCoroutine(Reload());
         }
 
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+        if ((spray && Input.GetButton("Fire1") || !spray && Input.GetButtonDown("Fire1")) && Time.time >= nextTimeToFire)
         {
             Shoot();
             nextTimeToFire = Time.time + 1f / fireRate;
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading && (currentAmmo != cabinSize || totalAmmo > 0))
         {
-            Reload();
+            StartCoroutine(Reload());
         }
     }
 }
