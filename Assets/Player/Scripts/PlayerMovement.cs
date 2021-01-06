@@ -14,12 +14,25 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 velocity;
 
+    public float originalHeight;
+
+    public float crouchHeight;
+
+    private void Start()
+    {
+        originalHeight = controller.height;
+    }
+
     private void Update()
     {
         if (controller.isGrounded && Input.GetButtonDown("Jump"))
-        {
             velocity.y = jumpHeight;
-        }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+            controller.height = crouchHeight;
+
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+            controller.height = originalHeight;
     }
 
     void FixedUpdate()
