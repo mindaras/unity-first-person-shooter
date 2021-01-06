@@ -142,7 +142,7 @@ public class Weapon : MonoBehaviour
         if ((currentAmmo <= 0 && totalAmmo > 0 && !isReloading) || (Input.GetKeyDown(KeyCode.R) && !isReloading && (currentAmmo != cabinSize || totalAmmo > 0)))
             StartCoroutine(Reload());
 
-        if ((spray && Input.GetKey(KeyCode.Mouse2) || !spray && Input.GetKeyDown(KeyCode.Mouse2)) && Time.time >= nextTimeToFire)
+        if ((spray && Input.GetKey(KeyCode.Mouse0) || !spray && Input.GetKeyDown(KeyCode.Mouse0)) && Time.time >= nextTimeToFire)
         {
             Shoot();
             nextTimeToFire = Time.time + 1f / fireRate;
