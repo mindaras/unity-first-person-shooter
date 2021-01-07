@@ -33,6 +33,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.LeftControl))
             controller.height = originalHeight;
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            speed *= 2;
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+            speed /= 2;
     }
 
     void FixedUpdate()
