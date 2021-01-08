@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float crouchHeight;
 
+    private bool isRunning;
+
     private void Start()
     {
         originalHeight = controller.height;
@@ -37,10 +39,25 @@ public class PlayerMovement : MonoBehaviour
             controller.height = originalHeight;
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
             speed *= 2;
+            isRunning = true;
+        }
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
             speed /= 2;
+            isRunning = false;
+        }
+    }
+
+    void HandleAnimation(float x, float z)
+    {
+        var velocityX = isRunning ? x * 2 : x;
+        var velocityZ = isRunning ? z * 2 : z;
+
+        animator.SetFloat("velocityX", velocityX);
+        animator.SetFloat("velocityZ", velocityZ);
     }
 
     void FixedUpdate()
@@ -61,5 +78,7 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
+
+        HandleAnimation(x, z);
     }
 }
