@@ -235,9 +235,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 6139244902553725717}
+  animator: {fileID: 0}
   speed: 5
   gravity: 19.62
   jumpHeight: 6
+  originalHeight: 0
+  crouchHeight: 0
 --- !u!114 &-7734140774093302058
 MonoBehaviour:
   m_ObjectHideFlags: 0
