@@ -30,13 +30,22 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         if (controller.isGrounded && Input.GetButtonDown("Jump"))
+        {
             velocity.y = jumpHeight;
+            animator.SetTrigger("jumping");
+        }
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
             controller.height = crouchHeight;
+            animator.SetBool("isCrouching", true);
+        }
 
         if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
             controller.height = originalHeight;
+            animator.SetBool("isCrouching", false);
+        }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
