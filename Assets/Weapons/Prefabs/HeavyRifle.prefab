@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 557439756}
   - component: {fileID: 557439757}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FireLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 1709044099}
   - component: {fileID: 1709044101}
   - component: {fileID: 1709044100}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5178,7 +5178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6673566437058474683
 Transform:
   m_ObjectHideFlags: 0
@@ -5217,8 +5217,15 @@ MonoBehaviour:
   muzzleFlash: {fileID: 1709044101}
   impactEffect: {fileID: 3375395646156138670, guid: fb4106701227b46ce8ea40936bb7a42b,
     type: 3}
+  uIManager: {fileID: 0}
+  animator: {fileID: 0}
+  spray: 1
+  damage: 35
   hitForce: 60
-  fireRate: 15
+  fireRate: 3
+  totalAmmo: 90
+  cabinSize: 30
+  reloadTime: 1
 --- !u!1 &8182498975353633019
 GameObject:
   m_ObjectHideFlags: 0

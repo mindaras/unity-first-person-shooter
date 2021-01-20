@@ -108,12 +108,14 @@ public class Weapon : MonoBehaviour
             {
                 currentAmmo = totalAmmo;
                 totalAmmo = 0;
-            } else
+            }
+            else
             {
                 currentAmmo = cabinSize;
                 totalAmmo -= cabinSize;
             }
-        } else
+        }
+        else
         {
             var missingAmmo = cabinSize - currentAmmo;
 
@@ -121,7 +123,8 @@ public class Weapon : MonoBehaviour
             {
                 currentAmmo += totalAmmo;
                 totalAmmo = 0;
-            } else
+            }
+            else
             {
                 currentAmmo += missingAmmo;
                 totalAmmo -= missingAmmo;
